@@ -1,13 +1,12 @@
 <?php
-session_start();
-include "./../App/config.php";
-include "./../App/autoload.php";
-//defini os paths para as classes do sistema e as classes gerais
 
-$path["conexao"] = "painel/classes/";
-$path["site"] = 'http://localhost/sites/framework/';
+    global $telaAtual;
+    global $site;
 
+    $site['nome'] = "Painel Toretto";
+    $site['cabecalho'] = "Painel ADM";
 
-
-
-?>
+    $site['conexao']['db'] = 'painel';
+    $site['conexao']['host'] = 'localhost';
+    $site['conexao']['user'] = 'root';
+    $site['conexao']['pass'] = '';
