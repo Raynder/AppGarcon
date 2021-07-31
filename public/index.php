@@ -1,12 +1,7 @@
 <?php
 ob_start();
 include 'ctrl.php';
-echo(memory_get_usage());
-echo("<br>");
-echo(memory_get_peak_usage(true));
-echo("<br>");
 
-echo(ini_set('memory_limit', '16M'));
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">
 <html xmlns="">
