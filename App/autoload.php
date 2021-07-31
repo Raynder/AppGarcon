@@ -3,6 +3,7 @@
     spl_autoload_register(function($class){
         $directorys = [
             "Libraries",
+            "Models/Defaut",
             "Models",
             "Helpers"
         ];

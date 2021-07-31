@@ -1,2 +1,7 @@
-<h1><?php echo $dados['titulo'];?></h1>
-<p><?php echo $dados['descricao'];?></p>
+<div class="conteudo">
+
+    <div>
+        <h1>HOola</h1>
+        <span class="tente">tantskdl</span>
+    </div>
+</div>
