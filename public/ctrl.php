@@ -5,7 +5,7 @@ include "./../App/autoload.php";
 //defini os paths para as classes do sistema e as classes gerais
 
 $path["conexao"] = "painel/classes/";
-$path["site"] = 'http://localhost/newFrame/';
+$path["site"] = 'http://localhost/AppGarcon/';
 
 
 ?>

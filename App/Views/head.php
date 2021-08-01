@@ -19,10 +19,7 @@
 <div id="mySidenav" class="sidenav">
 	<div class="menu">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>sobre">About</a>
-		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>servicoes">Services</a>
-		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>clientes">Clients</a>
-		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>contatos/amigos">Contact</a>
+		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>controle">Controle</a>
 	</div>
 </div>
 

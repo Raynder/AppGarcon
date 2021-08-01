@@ -157,14 +157,13 @@ include 'ctrl.php';
 	<div class="body-wrapper">
 		
 	    
-		<!-- INCIO INTERNAS -->
+		<!-- INCIO PAGINAS -->
 		<?php
-			//include("$abrePag");
 			include "../App/Views/head.php";
             $rotas = new Rota();
             include "../App/Views/footer.php";
 		?>
-		<!--/FIM INTERNAS  --> 
+		<!--/FIM PAGINAS  --> 
 
 
 
