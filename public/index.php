@@ -12,6 +12,8 @@ include 'ctrl.php';
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="<?=URL?>assets/cropper/css/cropper.css">
 	<style>
 		a, h1, h2, p{
 			font-family: 'PT Serif', serif;
@@ -162,7 +164,7 @@ include 'ctrl.php';
 			include "../App/Views/head.php";
             $rotas = new Rota();
             include "../App/Views/footer.php";
-		?>
+			?>
 		<!--/FIM PAGINAS  --> 
 
 
@@ -183,6 +185,12 @@ include 'ctrl.php';
 			document.getElementById('menu-user').style.width = "0"
 		}
 		</script>
+
+		<!-- Plugins -->
+		<script src="<?=URL?>assets/cropper/cropper.js"></script>
+		<script src="<?=URL?>assets/cropper/jquery-cropper.min.js"></script>
+		<script src="<?=URL?>assets/jquery.form.min.js"></script>
+
 	</div>
 
 </body>

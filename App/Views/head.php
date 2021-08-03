@@ -1,7 +1,7 @@
 <div class="cabecalho">
 	<div class="nomeEmpresa">
-	<span style="font-size:30px;cursor:pointer" id="openbtn" onclick="openNav()">&#9776;</span>
-		<a href=""><?= strtoupper(EMPRESA) ?></a>
+	<span style="font-size:30px;cursor:pointer;color:white;" id="openbtn" onclick="openNav()">&#9776;</span>
+		<a href="">&nbsp;&nbsp;<?=strtoupper(EMPRESA) ?></a>
 	</div>
 	<div onmouseout="closeUser()" onmouseover="openUser()" class="user">
 
@@ -19,7 +19,10 @@
 <div id="mySidenav" class="sidenav">
 	<div class="menu">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>controle">Controle</a>
+		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>editor/fundo">Fundo</a>
+		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>servicoes">Services</a>
+		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>clientes">Clients</a>
+		<i class="bi bi-forward"></i><a class="option" href="<?= URL ?>contatos/amigos">Contact</a>
 	</div>
 </div>
 

@@ -10,13 +10,8 @@
          $this->view('paginas/home', $dados);
      }
 
-     public function sobre() {
-         $dados = [
-            'titulo' => 'About',
-            'descricao' => 'More of, how learn MVC with PHP'
-         ];
-         $this->view('paginas/sobre', $dados);
-         
+     public function background() {
+        $this->view('paginas/background'); 
      }
 
      public function header() {
