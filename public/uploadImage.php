@@ -1,6 +1,6 @@
 <?php
 
-//upload.php
+include_once "ctrl.php";
 
 if(isset($_POST['image']))
 {
@@ -22,7 +22,7 @@ if(isset($_POST['image']))
 
 	file_put_contents($image_name, $data);
 
-	echo __DIR__."/".$image_name;
+	echo URL.$image_name;
 
 	//ligar ao controler para adicionar o caminho padrão
 }
