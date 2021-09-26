@@ -270,7 +270,7 @@
         </div>
 
         <div class="row rodape ">
-            <div class="menus col-10 ">
+            <div class="menus col-10" onclick="mnu()">
                 <div class="menu ">
                     <i class="fa fa-home " aria-hidden="true "></i>
                 </div>
