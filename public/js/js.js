@@ -24,14 +24,27 @@ $(document).ready(function() {
 
 // script de abrir e fechar menu
 function mnu() {
-    mnu = document.querySelector('.rodape');
-    mnu.style.width = '50px';
-    mnu.style.height = '50px';
-    fas = document.querySelectorAll('.menu');
-    fas[0].getElementsByTagName('i')[0].style.fontSize = '0pt';
-    fas[1].getElementsByTagName('i')[0].style.fontSize = '0pt';
-    fas[2].getElementsByTagName('i')[0].style.fontSize = '0pt';
-    fas[3].getElementsByTagName('i')[0].style.fontSize = '0pt';
-    fas[4].getElementsByTagName('i')[0].style.fontSize = '0pt';
+    menu = document.querySelector('.rodape');
+    if (menu.style.width == '50px') {
+        menu.style.width = '150px';
+        menu.style.height = '150px';
+        menu.style.webkitTransform = "translate(-30%, 30%)";
+        fas = document.querySelectorAll('.menu');
+        fas[0].getElementsByTagName('i')[0].style.fontSize = '21pt';
+        fas[1].getElementsByTagName('i')[0].style.fontSize = '17pt';
+        fas[2].getElementsByTagName('i')[0].style.fontSize = '21pt';
+        fas[3].getElementsByTagName('i')[0].style.fontSize = '20pt';
+        fas[4].getElementsByTagName('i')[0].style.fontSize = '21pt';
+    } else {
+        menu.style.width = '50px';
+        menu.style.height = '50px';
+        menu.style.webkitTransform = "translate(-20%, 20%)";
+        fas = document.querySelectorAll('.menu');
+        fas[0].getElementsByTagName('i')[0].style.fontSize = '0pt';
+        fas[1].getElementsByTagName('i')[0].style.fontSize = '0pt';
+        fas[2].getElementsByTagName('i')[0].style.fontSize = '0pt';
+        fas[3].getElementsByTagName('i')[0].style.fontSize = '0pt';
+        fas[4].getElementsByTagName('i')[0].style.fontSize = '0pt';
+    }
 }
 // fim do script do menu
