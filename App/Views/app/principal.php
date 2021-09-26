@@ -200,7 +200,7 @@
                     <div class="info-estabelecimento">
                         <p class="nta-estabelecimento">4,3</p>
                         <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
+                        <p class="nm-estabelecimento">Estabelecimento açai</p>
                     </div>
                     <div class="acoes">
                         <a class="fav">
