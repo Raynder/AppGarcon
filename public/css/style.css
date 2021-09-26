@@ -199,18 +199,47 @@ i.fa.fa-heart.favoritar {
     padding: 0 10px;
 }
 
-.espaco-rodape {
+espaco-rodape {
     height: 48px;
 }
 
+
+/* Estilo menor */
+
+
+/* .rodape {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-20%, 20%);
+    background-color: #ff0000;
+    position: fixed;
+    bottom: 0;
+} */
+
+
+/* fim */
+
+
+/* Estilo maior */
+
 .rodape {
-    width: 100%;
-    background-color: white;
+    z-index: 2;
+    transition: 1s;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: translate(-30%, 30%);
+    background-color: #ff0000;
     position: fixed;
     bottom: 0;
 }
 
+
+/* Fim */
+
 .menu {
+    transition: 1s;
     width: 20%;
     height: 100%;
     float: left;
@@ -246,28 +275,42 @@ i.fa.fa-heart.favoritar {
     color: #ba1616
 }
 
+.menu .fa {
+    transition: 1s;
+}
+
 .fa-home {
-    font-size: 36pt;
+    font-size: 21pt;
+    top: 3px;
+    left: 24px;
+    transform: rotate(-4deg);
 }
 
 .fa-heart {
-    font-size: 25pt;
+    font-size: 17pt;
+    top: 8px;
+    left: 35px;
+    transform: rotate(15deg);
 }
 
 i.fa.fa-cart-arrow-down {
-    font-size: 30pt;
+    font-size: 21pt;
+    top: 17px;
+    left: 39px;
+    transform: rotate(41deg);
 }
 
 i.fa.fa-bars {
-    font-size: 30pt;
+    transform: rotate(94deg);
+    font-size: 21pt;
 }
 
 i.fa.fa-user-o {
-    font-size: 30pt;
+    font-size: 20pt;
+    top: 47px;
+    left: 34px;
+    transform: rotate(72deg);
 }
-
-
-/* fim icons */
 
 
 /* fim icons */
