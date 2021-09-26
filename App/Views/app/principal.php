@@ -158,42 +158,108 @@
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Pizzaria Cardoso</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Estabelecimento</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>
             <div class="estabelecimento col-4 col-sm-4 col-md-4">
                 <a href=" ">
                     <div class="image-estabelecimento">
-                        <img src="<?=URL?>img/entrega.png " alt="# ">
+                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
+                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                    </div>
+                    <div class="info-estabelecimento">
+                        <p class="nta-estabelecimento">4,3</p>
+                        <p class="stts-estabelecimento">aberto</p>
+                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
+                    </div>
+                    <div class="acoes">
+                        <a class="fav">
+                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                        </a>
                     </div>
                 </a>
             </div>

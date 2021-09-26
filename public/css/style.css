@@ -54,8 +54,10 @@ p {
 }
 
 .imagem-recente {
+    padding: 10px;
     background-color: #cecece;
     width: 100%;
+    border: solid 1px;
     border-radius: 50%;
 }
 
@@ -102,13 +104,89 @@ p {
     width: 100%;
 }
 
+
+/* Estabelecimento informações */
+
 .estabelecimento {
     margin-bottom: 24px;
+    position: relative;
 }
 
-.image-estabelecimento img {
+.image-estabelecimento {
+    position: relative;
+}
+
+.image-estabelecimento img.fundo {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 7px 8px grey;
+}
+
+.info-estabelecimento {
+    left: -12px;
+    padding: 0 0 0 24px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 41px;
+}
+
+.info-estabelecimento p {
+    font-size: 9pt;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+img.logo {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    border-radius: 50%;
+    border: solid 1px red;
+}
+
+p.stts-estabelecimento {
+    background-color: red;
+    width: 55%;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    color: white;
+    font-weight: bold;
+}
+
+.acoes {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    left: -12px;
+    padding: 0 0 0 24px;
     width: 100%;
 }
+
+
+/* Icone favoritar */
+
+a.fav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+i.fa.fa-heart.favoritar {
+    transform: translate(-14px, -3px);
+    font-size: 16pt;
+}
+
+
+/* Fim icone favoritar */
+
+
+/* Fim estabelecimento informações */
 
 .destaques .imagem-topico {
     width: 60px;
@@ -187,6 +265,9 @@ i.fa.fa-bars {
 i.fa.fa-user-o {
     font-size: 30pt;
 }
+
+
+/* fim icons */
 
 
 /* fim icons */
