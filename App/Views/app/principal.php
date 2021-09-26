@@ -218,7 +218,7 @@
                     <div class="info-estabelecimento">
                         <p class="nta-estabelecimento">4,3</p>
                         <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento restaurante</p>
+                        <p class="nm-estabelecimento">Estabelecimento restaurante2</p>
                     </div>
                     <div class="acoes">
                         <a class="fav">
