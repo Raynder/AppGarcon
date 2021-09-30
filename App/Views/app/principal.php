@@ -37,9 +37,11 @@
                 <ul id="autoWidth" class="cs-hidden">
                     <li class="item-a">
                         <div class="topico">
-                            <div class="imagem-topico"></div>
+                            <div class="imagem-topico">
+                                <img src="<?=URL?>img/HAMBURGUER.png" alt="">
+                            </div>
                             <div class="nome-topico">
-                                <p>Lanchonete</p>
+                                <p>Hamburger</p>
                             </div>
                         </div>
                     </li>
@@ -48,7 +50,9 @@
 
                     <li class="item-b">
                         <div class="topico">
-                            <div class="imagem-topico"></div>
+                            <div class="imagem-topico">
+                                <img src="<?=URL?>img/PIZZA.png" alt="">
+                            </div>
                             <div class="nome-topico">
                                 <p>Pizzaria</p>
                             </div>
@@ -59,7 +63,9 @@
 
                     <li class="item-c">
                         <div class="topico">
-                            <div class="imagem-topico"></div>
+                            <div class="imagem-topico">
+                                <img src="<?=URL?>img/SORVETE.png" alt="">
+                            </div>
                             <div class="nome-topico">
                                 <p>Sorvete</p>
                             </div>
@@ -70,7 +76,9 @@
 
                     <li class="item-d">
                         <div class="topico">
-                            <div class="imagem-topico"></div>
+                            <div class="imagem-topico">
+                                <img src="<?=URL?>img/SORVETE.png" alt="">
+                            </div>
                             <div class="nome-topico">
                                 <p>Açai</p>
                             </div>
@@ -81,7 +89,9 @@
 
                     <li class="item-e">
                         <div class="topico">
-                            <div class="imagem-topico"></div>
+                            <div class="imagem-topico">
+                                <img src="<?=URL?>img/PRATO.png" alt="">
+                            </div>
                             <div class="nome-topico">
                                 <p>Restaurantes</p>
                             </div>
@@ -286,6 +296,10 @@
                 <div class="menu ">
                     <i class="fa fa-bars " aria-hidden="true "></i>
                 </div>
+                <div class="menu seta">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </div>
+                
             </div>
         </div>
     </div>
