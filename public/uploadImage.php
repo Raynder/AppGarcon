@@ -18,7 +18,7 @@ if(isset($_POST['image']))
 
 	$data = base64_decode($image_array_2[1]);
 
-	$image_name = 'img/upload/' . time() . '.png';
+	$image_name = 'img/logos/Temp/' . time() . '.png';
 
 	file_put_contents($image_name, $data);
 

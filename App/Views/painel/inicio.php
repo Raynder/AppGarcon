@@ -238,30 +238,30 @@
                 <div class="form-group">
                   <label for="">Horario de Funcionamento</label><br>
                   <input type="time" id="hr_inicio" name="hr_inicio" min="00:00" max="23:59" required> as
-                  <input type="time" id="hr_encerramento" name="hr_encerramento" min="00:00" max="23:59" required>
+                  <input type="time" id="hr_fim" name="hr_fim" min="00:00" max="23:59" required>
                 </div>
                 
 
                 <div class="" align="center">
-                <br />
-                <h3 align="center">Coloque aqui sua logo</h3>
-                <br />
-                <div class="row">
-                    <div class="col-md-4">&nbsp;</div>
-                    <div class="col-md-4">
-                        <div class="image_area">
-                            <form method="post">
-                                <label for="upload_image">
-                                    <img src="<?=URL?>img/user.jpg" id="uploaded_image" class="img-responsive img-circle" />
-                                    <div class="overlay">
-                                        <div class="text">Clique na imagem</div>
-                                    </div>
-                                    <input type="file" name="image" class="image" id="upload_image" style="display:none" />
-                                </label>
-                            </form>
-                        </div>
-                    </div>
-                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                  <br />
+                  <h3 align="center">Coloque aqui sua logo</h3>
+                  <br />
+                  <div class="row">
+                      <div class="col-md-4">&nbsp;</div>
+                      <div class="col-md-4">
+                          <div class="image_area">
+                              <form method="post">
+                                  <label for="upload_image">
+                                      <img src="<?=URL?>img/user.jpg" id="uploaded_image" class="img-responsive img-circle" />
+                                      <div class="overlay">
+                                          <div class="text">Clique na imagem</div>
+                                      </div>
+                                      <input type="file" name="image" class="image" id="upload_image" style="display:none" />
+                                  </label>
+                              </form>
+                          </div>
+                      </div>
+                  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -300,7 +300,7 @@
               </div>
               <!-- /.box-body -->          
               <div class="box-footer">
-                <button type="submit" class="btn btn-success">Salvar</button>
+                <button onclick="cadastrar_empresa()" type="button" class="btn btn-success">Salvar</button>
               </div>
             </form>
           </div>
@@ -326,22 +326,7 @@
 </div>
 
 <script>
-  function consultar(cnpj){
-    $.ajax({
-      url : "http://casadapizzacardoso.epizy.com/painel/api.php",
-      type : 'post',
-      data: {cnpj: cnpj},
-      // beforeSend : function(){
-      //     $("#resultado").html("ENVIANDO...");
-      // }
-    })
-    .done(function(msg){
-      $("#resultado").html(msg);
-    })
-    .fail(function(jqXHR, textStatus, msg){
-      alert(msg);
-    });
-  }
+  
 </script>
 
 
