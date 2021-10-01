@@ -242,14 +242,14 @@
                 </div>
                 
 
-                <div class="" align="center">
+                <div class="">
                   <br />
-                  <h3 align="center">Coloque aqui sua logo</h3>
+                  <p>Coloque aqui sua logo</p>
                   <br />
                   <div class="row">
-                      <div class="col-md-4">&nbsp;</div>
-                      <div class="col-md-4">
-                          <div class="image_area">
+                      <!-- <div class="col-md-4">&nbsp;</div> -->
+                      <div class="col-md-8">
+                          <div align="center" class="image_area">
                               <form method="post">
                                   <label for="upload_image">
                                       <img src="<?=URL?>img/user.jpg" id="uploaded_image" class="img-responsive img-circle" />
@@ -293,8 +293,25 @@
               
 
                 <div class="checkbox">
+                  <style>
+                    .checkbox label{
+                      width: 100%;
+                    }
+                  </style>
                   <label>
-                    <input type="checkbox" name="admin"> Administrador
+                    <input type="checkbox" name="pizzaria"> Pizzaria
+                  </label>
+                  <label>
+                    <input type="checkbox" name="restaurante"> Restaurante
+                  </label>
+                  <label>
+                    <input type="checkbox" name="acai"> Açai
+                  </label>
+                  <label>
+                    <input type="checkbox" name="hamburgeria"> Hamburgueria
+                  </label>
+                  <label>
+                    <input type="checkbox" name="sorveteria"> Sorveteria
                   </label>
                 </div>
               </div>

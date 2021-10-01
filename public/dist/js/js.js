@@ -120,14 +120,22 @@ $(document).ready(function() {
 //Fim do script de crop
 
 function cadastrar_empresa() {
+    categoria = ''
+
     nome = document.getElementById('nome').value
     hr_inicio = document.getElementById('hr_inicio').value
     hr_fim = document.getElementById('hr_fim').value
     image = document.getElementById('uploaded_image').src
+
+    checks = document.querySelectorAll('input[type="checkbox"]')
+    for (i = 0; i < length(checks); i++) {
+        if (checks[i].checked) categoria += checks[i].name + ','
+    }
+
     $.ajax({
             url: "painel/cadastrar",
             type: 'post',
-            data: { nome: nome, hr_inicio: hr_inicio, hr_fim: hr_fim, image: image },
+            data: { nome: nome, hr_inicio: hr_inicio, hr_fim: hr_fim, image: image, categoria: categoria },
             // beforeSend: function() {
             //     alert('enviando....')
             // }
