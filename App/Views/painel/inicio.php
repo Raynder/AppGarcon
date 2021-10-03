@@ -132,25 +132,24 @@
                   <tr>
                     <!-- <th style="width: 10px">Foto</th> -->
                     <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Admin</th>
+                    <th>Categoria</th>
                     <th>Criado em</th>
                     <th>Ações</th>
                   </tr>
                 </thead>
                 <tbody>
 
-                  <!-- <tr>
-                    <td><img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td>
+                  <tr>
+                    <!-- <td><img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td> -->
                     <td>Fulano</td>
                     <td>fulano@gmail.com.br</td>
-                    <td>Sim</td>
                     <td>02/04/2018</td>
                     <td>
                       <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
                       <button type="button" class="btn btn-danger btn-xs btn-flat">Excluir</button>
                     </td>
                   </tr>
+                  <!-- 
 
                   <tr>
                     <td>

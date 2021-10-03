@@ -9,7 +9,9 @@
     }
 
      public function index(){
-         $this->view('painel/inicio');
+        $empresas = $this->empresa->select();
+
+        $this->view('painel/inicio', $empresas);
      }
 
      public function cadastrar(){
@@ -20,9 +22,10 @@
             //cadastrar empresa
             $dados = array(
                 "nome" => $_POST['nome'],
-                "ht_inicio" => $_POST['ht_inicio'],
+                "hr_inicio" => $_POST['hr_inicio'],
                 "hr_fim" => $_POST['hr_fim'],
-                "categoria" => $_POST['categoria']
+                "categoria" => $_POST['categoria'],
+                "criado_em" => date('d/m/Y H:i')
             );
             if($this->empresa->cadastrar_empresa($dados)){
                 if(rename($imageTemp, $image)){

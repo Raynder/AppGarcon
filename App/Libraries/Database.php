@@ -2,12 +2,13 @@
 
     class Database {
 
-        private $user = 'epiz_29913172';
-        private $pass = 'LS1fGaNPGezBPzS';
-        private $host = "sql109.epizy.com";
-        private $dbname = "epiz_29913172_easydb";
+        private $user = 'epiz_28831117';
+        private $pass = 'D2LI1OTaFMyhT';
+        private $host = "sql308.epizy.com";
+        private $dbname = "epiz_28831117_banco";
 
         private $sql;
+        private $lista = [":A",":B",":C",":D",":E",":F",":G",":H",":I"];
 
         public function __construct (){
             try{
@@ -29,7 +30,7 @@
             $stmt->execute();
             return $stmt;
         }
-
+        
         public function select($query, $array = array()) {
             $dados = $this->query($query, $array)->fetchAll(PDO::FETCH_ASSOC);
             if(count($dados) > 1){
@@ -37,6 +38,39 @@
                 return $dados;
             }
             return $this->query($query, $array)->fetch(PDO::FETCH_ASSOC);
+        }
+        
+        public function selectAnd($class, $array = array(), $infos =array()) {
+            $cont = 0;
+            $array2 = array();
+
+            $query = "SELECT ";
+
+            if(count($infos) > 1){
+                for($i=0; $i < count($infos); $i++){
+                    $query .= $infos[$i].",";
+                }
+                $query = substr($query, 0, -1);
+            }
+            else{
+                $query .= "*";
+            }
+
+            $query .= " FROM $class ";
+            $query .= count($array) > 0 ? "WHERE " : "";
+            foreach($array as $key => $value){
+                $query .= $key." = ".$this->lista[$cont]." AND ";
+                $array2[$this->lista[$cont]] = $value;
+                $cont++;
+            }
+            $query = $this->str_lreplace(" AND ", ";", $query);
+
+            $dados = $this->query($query, $array2)->fetchAll(PDO::FETCH_ASSOC);
+            if(count($dados) > 1){
+                //Caso retorne mais de um objeto
+                return $dados;
+            }
+            return $this->query($query, $array2)->fetch(PDO::FETCH_ASSOC);
         }
 
         public function update($query, $array = array()){
@@ -54,6 +88,17 @@
             $stmt->bindParam($paramSql, $param);
         }
 
+        function str_lreplace($search, $replace, $subject)
+        {
+            $pos = strrpos($subject, $search);
+        
+            if($pos !== false)
+            {
+                $subject = substr_replace($subject, $replace, $pos, strlen($search));
+            }
+        
+            return $subject;
+        }
     }
 
     //$sql->query("INSERT INTO cadastros(nome, idade) VALUES (:N, :I)", $array);

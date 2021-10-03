@@ -13,15 +13,20 @@
                 ":N" => $dados["nome"],
                 ":I" => $dados["hr_inicio"],
                 ":F" => $dados["hr_fim"],
-                ":C" => $dados["categoria"]
+                ":C" => $dados["categoria"],
+                ":D" => $dados["criado_em"]
             );
-            $query = "INSERT INTO empresas(nome, hr_inicio, hr_fim, categoria) VALUES (:N, :I, :F, :C)";
+            $query = "INSERT INTO empresas(nome, hr_inicio, hr_fim, categoria, criado_em) VALUES (:N, :I, :F, :C, :D)";
             if($this->empresaexist($dados['nome'])){
                 if($this->db->query($query, $dados2)){
                     return true;
                 }
             }
             return false;
+        }
+
+        public function select($array = array(), $lista = []){
+            $this->db->selectAnd("empresas", $array, $lista);
         }
 
         // public function login($dados = array()){

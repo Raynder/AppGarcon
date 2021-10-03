@@ -128,7 +128,7 @@ function cadastrar_empresa() {
     image = document.getElementById('uploaded_image').src
 
     checks = document.querySelectorAll('input[type="checkbox"]')
-    for (i = 0; i < length(checks); i++) {
+    for (i = 0; i < checks.length; i++) {
         if (checks[i].checked) categoria += checks[i].name + ','
     }
 
