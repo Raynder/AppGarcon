@@ -43,8 +43,6 @@ class Rota {
 
         return $url;    
     }
-
-    print_r($_GET);
     
   }
 }
