@@ -11,7 +11,7 @@
      public function index(){
         $empresas = $this->empresa->select();
 
-        $this->view('painel/inicio', $empresas);
+        $this->view('painel/inicio', ['empresas' => $empresas]);
      }
 
      public function cadastrar(){
@@ -25,7 +25,7 @@
                 "hr_inicio" => $_POST['hr_inicio'],
                 "hr_fim" => $_POST['hr_fim'],
                 "categoria" => $_POST['categoria'],
-                "criado_em" => date('d/m/Y H:i')
+                "criado_em" => date('Y-m-d H:i:d')
             );
             if($this->empresa->cadastrar_empresa($dados)){
                 if(rename($imageTemp, $image)){

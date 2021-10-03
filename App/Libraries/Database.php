@@ -2,10 +2,10 @@
 
     class Database {
 
-        private $user = 'epiz_28831117';
-        private $pass = 'D2LI1OTaFMyhT';
-        private $host = "sql308.epizy.com";
-        private $dbname = "epiz_28831117_banco";
+        private $user = 'epiz_29913172';
+        private $pass = 'LS1fGaNPGezBPzS';
+        private $host = "sql109.epizy.com";
+        private $dbname = "epiz_29913172_easydb";
 
         private $sql;
         private $lista = [":A",":B",":C",":D",":E",":F",":G",":H",":I"];
@@ -78,7 +78,6 @@
         }
 
         private function setParams($array = array(), $stmt){
-            echo("conexao<br>");
             foreach($array as $key => $value){
                 $this->setParam($key, $value, $stmt);
             }

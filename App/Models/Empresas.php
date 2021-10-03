@@ -26,7 +26,7 @@
         }
 
         public function select($array = array(), $lista = []){
-            $this->db->selectAnd("empresas", $array, $lista);
+            return $this->db->selectAnd("empresas", $array, $lista);
         }
 
         // public function login($dados = array()){
