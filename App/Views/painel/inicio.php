@@ -150,7 +150,7 @@
                         <td><?=$empresa['criado_em']?></td>
                         <td>
                           <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
-                          <button type="button" class="btn btn-danger btn-xs btn-flat">Excluir</button>
+                          <button type="button" onclick="excluir_empresa(<?=$empresa['id']?>,<?=$empresa['nome']?>)" class="btn btn-danger btn-xs btn-flat">Excluir</button>
                         </td>
                       </tr>
   
@@ -168,7 +168,7 @@
                     <td><?=$dados['empresas']['criado_em']?></td>
                     <td>
                       <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
-                      <button type="button" class="btn btn-danger btn-xs btn-flat">Excluir</button>
+                      <button type="button" onclick="excluir_empresa(<?=$dados['empresas']['id']?>,<?=$dados['empresas']['nome']?>)" class="btn btn-danger btn-xs btn-flat">Excluir</button>
                     </td>
                   </tr>
                   <?

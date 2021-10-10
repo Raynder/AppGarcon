@@ -2,9 +2,17 @@
 
  class App extends Controller {
 
+     private $empresa;
+
+     public function __construct(){
+        $this->empresa = $this->model('Empresas');
+     }
+
      public function index(){
+         $empresas = $this->empresa->select();
+
          $dados = [
-            'titulo' => 'Home Page',
+            'empresas' => $empresas,
             'descricao' => 'Learn Of MVC'
          ];
          $this->view('app/principal', $dados);

@@ -3,6 +3,7 @@
     class Empresas {
 
         private $db;
+        private $table = "empresas";
 
         public function __construct(){
             $this->db = new Database();
@@ -16,7 +17,7 @@
                 ":C" => $dados["categoria"],
                 ":D" => $dados["criado_em"]
             );
-            $query = "INSERT INTO empresas(nome, hr_inicio, hr_fim, categoria, criado_em) VALUES (:N, :I, :F, :C, :D)";
+            $query = "INSERT INTO $this->table(nome, hr_inicio, hr_fim, categoria, criado_em) VALUES (:N, :I, :F, :C, :D)";
             if($this->empresaexist($dados['nome'])){
                 if($this->db->query($query, $dados2)){
                     return true;
@@ -26,7 +27,12 @@
         }
 
         public function select($array = array(), $lista = []){
-            return $this->db->selectAnd("empresas", $array, $lista);
+            return $this->db->selectAnd($this->table, $array, $lista);
+        }
+
+        public function deleteEmpresa($id){
+            $query = "DELETE FROM $this->table WHERE id = ".$id;
+            return $this->db->query($query);
         }
 
         // public function login($dados = array()){

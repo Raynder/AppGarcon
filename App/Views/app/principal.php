@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <div class="container-fluid">
         <!-- Top da pagina -->
         <div class="row busca">
@@ -165,114 +169,40 @@
         <!-- Estabelecimentos -->
         <div class="row">
             <p style="text-align: center;">Estabelecimentos</p>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Pizzaria Cardoso</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento açai</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento restaurante</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
-            <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                <a href=" ">
-                    <div class="image-estabelecimento">
-                        <img class="logo" src="<?=URL?>img/user.jpg " alt="# ">
-                        <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                    </div>
-                    <div class="info-estabelecimento">
-                        <p class="nta-estabelecimento">4,3</p>
-                        <p class="stts-estabelecimento">aberto</p>
-                        <p class="nm-estabelecimento">Estabelecimento qualquer</p>
-                    </div>
-                    <div class="acoes">
-                        <a class="fav">
-                            <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                        </a>
-                    </div>
-                </a>
-            </div>
+
+            <?php
+            foreach($dados['empresas'] as $empresa){
+                ?>
+                <div class="estabelecimento col-4 col-sm-4 col-md-4">
+                    <a href=" ">
+                        <div class="image-estabelecimento">
+                            <img class="logo" src="<?=URL?>img/logos/logo_<?=$empresa['nome']?>.png " alt="# ">
+                            <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                        </div>
+                        <div class="info-estabelecimento">
+                            <p class="nta-estabelecimento">4,3</p>
+                            <?php
+                                $agora = date('H:i');
+                                if($agora > $empresa['hr_inicio'] && $agora < $empresa['hr_fim']){
+                                    echo('<p class="estado stts-estabelecimento">aberto</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
+                                }
+                                else{
+                                    echo('<p class="estado stts-estabelecimento">fechado</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
+                                }
+                             ?>
+                            <p class="nm-estabelecimento"><?=$empresa['nome']?></p>
+                        </div>
+                        <div class="acoes">
+                            <a class="fav">
+                                <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+
+                <?php
+            }
+            ?>
         </div>
         <!-- Fim dos estabelecimentos -->
 
@@ -302,4 +232,7 @@
                 
             </div>
         </div>
+        <script>
+        // document.querySelectorAll('.estado')[0].style.display = 'none';document.querySelectorAll('.estado')[1].style.display = 'none';document.querySelectorAll('.horario')[0].style.display = 'block';document.querySelectorAll('.horario')[1].style.display = 'block';
+        </script>
     </div>

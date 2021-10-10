@@ -14,6 +14,19 @@
         $this->view('painel/inicio', ['empresas' => $empresas]);
      }
 
+     public function excluir(){
+         if(isset($_POST['id']) && !empty($_POST['id'])){
+             if($this->empresa->deleteEmpresa($_POST['id'])){
+                $image = "img/logos/logo_".$_POST['nome'].".png";
+                unlink($image);
+                exit(json_encode('resp:Empresa deletada com sucesso!'));
+             }
+             else{
+                exit(json_encode('resp:Não foi possivel deletar esta empresa!'));
+             }
+         }
+     }
+
      public function cadastrar(){
         if(isset($_POST['nome']) && isset($_POST['hr_inicio']) && isset($_POST['hr_fim']) && isset($_POST['image'])){
             $imageTemp = explode(URL,$_POST['image'])[1];
