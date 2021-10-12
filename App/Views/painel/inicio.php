@@ -162,9 +162,9 @@
                     else{
                       ?>
                       <tr>
-                      <td>
+                      <!-- <td>
                         <img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm">
-                      </td>
+                      </td> -->
                       <td><?=$dados['empresas']['nome']?></td>
                       <td><?=explode(",",$dados['empresas']['categoria'])[0]?></td>
                       <td><?=$dados['empresas']['criado_em']?></td>
