@@ -98,6 +98,20 @@
         
             return $subject;
         }
+
+        function gerar_senha(){
+            $ma = "ABCDEFGHIJKLMNOPQRSTUVYXWZ"; // $ma contem as letras maiúsculas
+            $mi = "abcdefghijklmnopqrstuvyxwz"; // $mi contem as letras minusculas
+            $nu = "0123456789"; // $nu contem os números
+            $si = "!@#$%¨&*()_+="; // $si contem os símbolos
+            $senha = '';
+            
+            $senha .= str_shuffle($ma);
+            $senha .= str_shuffle($mi);
+            $senha .= str_shuffle($nu);
+            $senha .= str_shuffle($si);
+            return substr(str_shuffle($senha),0,8);
+        }
     }
 
     //$sql->query("INSERT INTO cadastros(nome, idade) VALUES (:N, :I)", $array);

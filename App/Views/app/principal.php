@@ -171,36 +171,38 @@
             <p style="text-align: center;">Estabelecimentos</p>
 
             <?php
-            foreach($dados['empresas'] as $empresa){
-                ?>
-                <div class="estabelecimento col-4 col-sm-4 col-md-4">
-                    <a href=" ">
-                        <div class="image-estabelecimento">
-                            <img class="logo" src="<?=URL?>img/logos/logo_<?=$empresa['nome']?>.png " alt="# ">
-                            <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
-                        </div>
-                        <div class="info-estabelecimento">
-                            <p class="nta-estabelecimento">4,3</p>
-                            <?php
-                                $agora = date('H:i');
-                                if($agora > $empresa['hr_inicio'] && $agora < $empresa['hr_fim']){
-                                    echo('<p class="estado stts-estabelecimento">aberto</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
-                                }
-                                else{
-                                    echo('<p class="estado stts-estabelecimento">fechado</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
-                                }
-                             ?>
-                            <p class="nm-estabelecimento"><?=$empresa['nome']?></p>
-                        </div>
-                        <div class="acoes">
-                            <a class="fav">
-                                <i class="fa fa-heart favoritar" aria-hidden="true "></i>
-                            </a>
-                        </div>
-                    </a>
-                </div>
-
-                <?php
+            if(is_array($dados['empresas']) || is_object($dados['empresas'])){
+                foreach($dados['empresas'] as $empresa) {
+                    ?>
+                    <div class="estabelecimento col-4 col-sm-4 col-md-4">
+                        <a href=" ">
+                            <div class="image-estabelecimento">
+                                <img class="logo" src="<?=URL?>img/logos/logo_<?=$empresa['nome']?>.png " alt="# ">
+                                <img class="fundo" src="<?=URL?>img/fundo-estabelecimento.jpg " alt="# ">
+                            </div>
+                            <div class="info-estabelecimento">
+                                <p class="nta-estabelecimento">4,3</p>
+                                <?php
+                                    $agora = date('H:i');
+                                    if($agora > $empresa['hr_inicio'] && $agora < $empresa['hr_fim']){
+                                        echo('<p class="estado stts-estabelecimento">aberto</p><p class="esthorario stts-estabelecimento"  style="display:none">aberto</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
+                                    }
+                                    else{
+                                        echo('<p class="estado stts-estabelecimento">fechado</p><p class="esthorario stts-estabelecimento"  style="display:none">fechado</p><p class="horario stts-estabelecimento" style="display:none">'.$empresa["hr_inicio"].' - '.$empresa["hr_fim"].'</p>');
+                                    }
+                                 ?>
+                                <p class="nm-estabelecimento"><?=$empresa['nome']?></p>
+                            </div>
+                            <div class="acoes">
+                                <a class="fav">
+                                    <i class="fa fa-heart favoritar" aria-hidden="true "></i>
+                                </a>
+                            </div>
+                        </a>
+                    </div>
+    
+                    <?php
+                }
             }
             ?>
         </div>
@@ -233,6 +235,15 @@
             </div>
         </div>
         <script>
-        // document.querySelectorAll('.estado')[0].style.display = 'none';document.querySelectorAll('.estado')[1].style.display = 'none';document.querySelectorAll('.horario')[0].style.display = 'block';document.querySelectorAll('.horario')[1].style.display = 'block';
+            setInterval(function(){
+                changeStatus()
+            },5000);
         </script>
+
+        <style>
+            .estado{
+                transition: .5s;
+            }
+        </style>
+        
     </div>

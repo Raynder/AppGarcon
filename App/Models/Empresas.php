@@ -10,14 +10,18 @@
         }
 
         public function cadastrar_empresa($dados = array()){
+            $senha = $this->db->gerar_senha();
+
             $dados2 = array(
                 ":N" => $dados["nome"],
+                ":P" => $dados["cnpj"],
+                ":S" => MD5($senha),
                 ":I" => $dados["hr_inicio"],
                 ":F" => $dados["hr_fim"],
                 ":C" => $dados["categoria"],
                 ":D" => $dados["criado_em"]
             );
-            $query = "INSERT INTO $this->table(nome, hr_inicio, hr_fim, categoria, criado_em) VALUES (:N, :I, :F, :C, :D)";
+            $query = "INSERT INTO $this->table(nome,cnpj,senha, hr_inicio, hr_fim, categoria, criado_em) VALUES (:N, :P, :S, :I, :F, :C, :D)";
             if($this->empresaexist($dados['nome'])){
                 if($this->db->query($query, $dados2)){
                     return true;

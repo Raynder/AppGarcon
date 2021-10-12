@@ -140,39 +140,42 @@
                 <tbody>
 
                 <?php
-                  if(!isset($dados['empresas']['id'])){
-                    foreach($dados['empresas'] as $empresa){
+                if(is_array($dados['empresas']) || is_object($dados['empresas'])){
+
+                    if(!isset($dados['empresas']['id'])){
+                      foreach($dados['empresas'] as $empresa){
+                        ?>
+                        <tr>
+                          <!-- <td><img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td> -->
+                          <td><?=$empresa['nome']?></td>
+                          <td><?=explode(",",$empresa['categoria'])[0]?></td>
+                          <td><?=$empresa['criado_em']?></td>
+                          <td>
+                            <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
+                            <button type="button" onclick="excluir_empresa('<?=$empresa['id']?>','<?=$empresa['nome']?>')" class="btn btn-danger btn-xs btn-flat">Excluir</button>
+                          </td>
+                        </tr>
+    
+                        <?
+                      }
+                    }
+                    else{
                       ?>
                       <tr>
-                        <!-- <td><img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td> -->
-                        <td><?=$empresa['nome']?></td>
-                        <td><?=explode(",",$empresa['categoria'])[0]?></td>
-                        <td><?=$empresa['criado_em']?></td>
-                        <td>
-                          <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
-                          <button type="button" onclick="excluir_empresa(<?=$empresa['id']?>,<?=$empresa['nome']?>)" class="btn btn-danger btn-xs btn-flat">Excluir</button>
-                        </td>
-                      </tr>
-  
-                      <?
+                      <td>
+                        <img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm">
+                      </td>
+                      <td><?=$dados['empresas']['nome']?></td>
+                      <td><?=explode(",",$dados['empresas']['categoria'])[0]?></td>
+                      <td><?=$dados['empresas']['criado_em']?></td>
+                      <td>
+                        <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
+                        <button type="button" onclick="excluir_empresa('<?=$dados['empresas']['id']?>','<?=$dados['empresas']['nome']?>')" class="btn btn-danger btn-xs btn-flat">Excluir</button>
+                      </td>
+                    </tr>
+                    <?
                     }
-                  }
-                  else{
-                    ?>
-                    <tr>
-                    <td>
-                      <img src="<?=URL?>dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm">
-                    </td>
-                    <td><?=$dados['empresas']['nome']?></td>
-                    <td><?=explode(",",$dados['empresas']['categoria'])[0]?></td>
-                    <td><?=$dados['empresas']['criado_em']?></td>
-                    <td>
-                      <button type="button" class="btn btn-primary btn-xs btn-flat">Editar</button>
-                      <button type="button" onclick="excluir_empresa(<?=$dados['empresas']['id']?>,<?=$dados['empresas']['nome']?>)" class="btn btn-danger btn-xs btn-flat">Excluir</button>
-                    </td>
-                  </tr>
-                  <?
-                  }
+                }
                 ?>
 
                   <!-- 

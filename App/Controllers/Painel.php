@@ -16,10 +16,15 @@
 
      public function excluir(){
          if(isset($_POST['id']) && !empty($_POST['id'])){
-             if($this->empresa->deleteEmpresa($_POST['id'])){
-                $image = "img/logos/logo_".$_POST['nome'].".png";
-                unlink($image);
-                exit(json_encode('resp:Empresa deletada com sucesso!'));
+             $image = "img/logos/logo_".$_POST['nome'].".png";
+             if(unlink($image)){
+                 if($this->empresa->deleteEmpresa($_POST['id'])){
+                    exit(json_encode('resp:Empresa deletada com sucesso!'));
+                 }
+                
+                 else{
+                    exit(json_encode('resp:Não foi possivel deletar esta empresa, favor comunicar a area responsavel!'));
+                 }
              }
              else{
                 exit(json_encode('resp:Não foi possivel deletar esta empresa!'));

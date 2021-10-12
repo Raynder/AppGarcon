@@ -52,7 +52,8 @@ function mnu() {
 
     }
 }
-// fim do script do menu
+mnu()
+    // fim do script do menu
 
 // Script de crop
 $(document).ready(function() {
@@ -156,7 +157,7 @@ function cadastrar_empresa() {
 
 }
 
-function excluir_empresa(id) {
+function excluir_empresa(id, nome) {
     $.ajax({
             url: "painel/excluir",
             type: 'post',
@@ -397,3 +398,25 @@ function consultar(cnpj) {
 //             alert(msg);
 //         });
 // }
+
+function changeStatus() {
+
+    estabelecimento = document.querySelectorAll('.info-estabelecimento');
+    estabelecimento.forEach(element => {
+        if (element.querySelector('.estado').textContent == 'aberto' || element.querySelector('.estado').textContent == 'fechado') {
+            element.querySelector('.estado').style.color = 'red'
+            setTimeout(function() {
+                element.querySelector('.estado').innerHTML = element.querySelector('.horario').textContent
+                element.querySelector('.estado').style.color = 'white'
+            }, 1000)
+        } else {
+            element.querySelector('.estado').style.color = 'red'
+            setTimeout(function() {
+                element.querySelector('.estado').innerHTML = element.querySelector('.esthorario').textContent
+                element.querySelector('.estado').style.color = 'white'
+            }, 1000)
+        }
+    });
+
+
+}
